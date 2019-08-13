@@ -5,8 +5,6 @@
     <vue-ads-table
       :columns="columns"
       :rows="rows"
-      :start="start"
-      :end="end"
     >
     </vue-ads-table>
   </div>
@@ -28,17 +26,51 @@ export default {
       {
         id: 1,
         name: "Hoge",
-        city: "Tokyo"
+        city: "Tokyo",
+        _children: [
+          {
+            id: "1-1",
+            name: "Hoge-1",
+            city: "Tokyo-1"
+          },
+          {
+            id: "1-2",
+            name: "Hoge-2",
+            city: "Tokyo-2"
+          },
+          {
+            id: "1-3",
+            name: "Hoge-3",
+            city: "Tokyo-3"
+          }
+        ]
       },
       {
         id: 2,
         name: "Fuga",
-        city: "Saitama"
+        _children: [
+          {
+            id: "2-1",
+            name: "Fuga-1",
+            city: "Tokyo-1"
+          },
+          {
+            id: "2-2",
+            name: "Fuga-2",
+            city: "Tokyo-2"
+          }
+        ]
       },
       {
         id: 3,
-        name: "Puyo",
-        city: "Chiba"
+        city: "Chiba",
+        _children: [
+          {
+            id: "3-1",
+            name: "Puyo-1",
+            city: "Tokyo-1"
+          }
+        ]
       }
     ];
 
@@ -47,7 +79,8 @@ export default {
         property: "id",
         title: "ID",
         direction: null,
-        filterble: true
+        filterble: true,
+        collapseIcon: true
       },
       {
         property: "name",
@@ -65,9 +98,7 @@ export default {
 
     return {
       rows,
-      columns,
-      start: 0,
-      end: 2
+      columns
     };
   }
 };
