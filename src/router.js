@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import TreeTable from './views/TreeTable.vue';
+import UsageReport from './views/UsageReport.vue';
 
 Vue.use(Router);
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/tree-table',
       name: 'tree-table',
       component: TreeTable,
+    },
+    {
+      path: '/usage-report',
+      name: 'usage-report',
+      component: UsageReport,
     },
     {
       path: '/about',

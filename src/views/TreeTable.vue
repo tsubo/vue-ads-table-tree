@@ -13,7 +13,6 @@
 <script>
 import { VueAdsTable } from "vue-ads-table-tree";
 import "vue-ads-table-tree/dist/vue-ads-table-tree.css";
-import "tailwindcss/dist/tailwind.css";
 
 export default {
   name: "TreeTable",
@@ -69,7 +68,14 @@ export default {
           {
             id: "3-1",
             name: "Piyo-1",
-            city: "Tokyo-1"
+            city: "Tokyo-1",
+            _children: [
+              {
+                id: "3-1-1",
+                name: "Piyo-1-1",
+                city: "Tokyo-1-1"
+              }
+            ]
           }
         ]
       },
@@ -105,7 +111,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .tree-table {
   text-align: left;
 }
