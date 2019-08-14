@@ -38,6 +38,7 @@ export default {
         previousAmount: "839,760",
         status: "",
         action: "",
+        _showChildren: true,
         _children: [
           {
             cursor: "",
@@ -54,6 +55,7 @@ export default {
             previousAmount: "91,000",
             status: "",
             action: "",
+            _showChildren: true,
             _children: [
               {
                 cursor: "",
