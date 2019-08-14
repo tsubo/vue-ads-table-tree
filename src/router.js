@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import TreeTable from './views/TreeTable.vue';
-import UsageReport from './views/UsageReport.vue';
+import UsageReport from './views/UsageReport/index.vue';
 
 Vue.use(Router);
 
