@@ -6,6 +6,11 @@
       src="../assets/logo.png"
     >
     <HelloWorld msg="Welcome to Your Vue.js App" />
+
+    <button
+      class="btn btn-primary"
+      @click="gotoPage('tree-table')"
+    >Goto Page</button>
   </div>
 </template>
 
@@ -17,6 +22,12 @@ export default {
   name: "home",
   components: {
     HelloWorld
+  },
+  methods: {
+    gotoPage(pathName) {
+      console.log("goto " + pathName);
+      this.$router.push({ name: pathName });
+    }
   }
 };
 </script>
